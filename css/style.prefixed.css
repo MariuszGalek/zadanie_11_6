@@ -27,6 +27,7 @@ body {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .board .create-column {
