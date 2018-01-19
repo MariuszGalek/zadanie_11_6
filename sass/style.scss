@@ -18,24 +18,28 @@ body {
 	.column-container {
 		display: flex;
 		flex-direction: row;
-		flex-wrap: nowrap;
-		overflow-x: auto;
+		flex-wrap: wrap;
+		justify-content: space-around;
 	}
 	.create-column {
-		margin: 10px;
-		padding: 10px;
+		margin: 10px auto;
+		padding: 10px 15px;
 		font-family: 'Lato', sans-serif;
 		font-weight: bold;
-		border-radius: 3px;
+		font-size: 18px;
+		border-radius: 5px;
+		position: relative;
+		display: block;
+		cursor: pointer;
 	}
 }
 .column {
-	min-width: 400px;
+	min-width: 350px;
 	min-height: 50vh;
+	margin: 30px 10px 0 10px;
 	background-color: #fff;
-	margin-left: 10px;
 	position: relative;
-	opacity: 0.5;
+	opacity: 0.7;
 	font-family: 'Lato', sans-serif;
 	h2 {
 		text-align: center;
@@ -47,22 +51,24 @@ body {
   		position: absolute;
   		right: 0;
   		top: 0;
-  		width: 25px;
-  		height: 25px;
+  		width: 40px;
+  		height: 40px;
   		background-color: rgba(0, 0, 0, 0.6);
   		color: #fff;
   		border: 0;
+  		cursor: pointer;
 	}
 	.add-card {
 		position: absolute;
 		left: 0;
 		top: 0;
-		height: 35px;
+		height: 40px;
 		padding: 2px;
 		background-color: rgba(0, 0, 0, 0.8);
 		color: #fff;
 		font-weight: bold;
 		margin: 4px;
+		cursor: pointer;
 	}
 	.card {
 		position: relative;
@@ -74,6 +80,19 @@ body {
 		margin: 5px;
 		padding: 5px;
 		overflow: hidden;
+		border-radius: 5px;
+		.card-delete {
+  			position: absolute;
+  			right: 0;
+  			top: 0;
+  			width: 20px;
+  			height: 50px;
+  			background-color: rgba(0, 0, 0, 0.5);
+  			color: #fff;
+  			border: 0;
+  			cursor: pointer;
+  			padding-left: 5px;
+		}
 	}
 	.column-card-list {
   		list-style: none;

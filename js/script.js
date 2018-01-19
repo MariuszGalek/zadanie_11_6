@@ -19,7 +19,7 @@ $(function() {
     		var $column = $('<div>').addClass('column');
     		var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
     		var $columnCardList = $('<ul>').addClass('column-card-list');
-    		var $columnDelete = $('<button>').addClass('btn-delete').text('x');
+    		var $columnDelete = $('<button>').addClass('btn-delete').append('<i class="fa fa-trash-o fa-2x" aria-hidden="true"></i>');
 			var $columnAddCard = $('<button>').addClass('add-card').text('Add a card');
 
 			$columnDelete.click(function() {
@@ -57,7 +57,7 @@ $(function() {
     	function createCard() {
     		var $card = $('<li>').addClass('card');
     		var $cardDescription = $('<p>').addClass('card-description').text(self.description);
-    		var $cardDelete = $('<button>').addClass('btn-delete').text('x');
+    		var $cardDelete = $('<button>').addClass('card-delete').append('<i class="fa fa-times" aria-hidden="true"></i>');
 
     		$cardDelete.click(function(){
         		self.removeCard();
